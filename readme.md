@@ -18,6 +18,13 @@ This project is designed as a hands-on learning environment to gain practical ex
 | R2 | ISP A | AS 200 |
 | R3 | ISP B | AS 300 |
 
+## Topology Diagram
+
+![Enterprise BGP Topology](topology/topology-diagram.png)
+
+---
+
+# BGP Configurations
 ### eBGP Connections
 
 - R1 ↔ R2
