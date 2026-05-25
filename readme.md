@@ -10,13 +10,23 @@ This project is designed as a hands-on learning environment to gain practical ex
 
 ---
 
+The lab simulates a resilient enterprise Internet edge architecture with dual ISP connectivity, internal dynamic routing, gateway redundancy, and simulated Internet reachability. The design incorporates OSPF for internal routing, eBGP for external connectivity, and HSRP for first-hop redundancy.
+
+---
 # Network Topology
 
-| Device | Role | ASN |
-|---|---|---|
-| R1 | Enterprise Edge Router | AS 65001 |
-| R2 | ISP A | AS 200 |
-| R3 | ISP B | AS 300 |
+| Device | Role |
+|---|---|
+| CORE-1 | Enterprise Core Router |
+| CORE-2 | Enterprise Core Router |
+| EDGE-1 | Enterprise Edge Router |
+| EDGE-2 | Enterprise Edge Router |
+| ISP-1 | Internet Service Provider |
+| ISP-2 | Internet Service Provider |
+| INTERNET | Simulated Internet Router |
+
+---
+
 
 ## Topology Diagram
 
@@ -24,8 +34,7 @@ This project is designed as a hands-on learning environment to gain practical ex
 
 ---
 
-# BGP Configurations
-### eBGP Connections
+# External BGP Connectivy
 
 - R1 ↔ R2
 - R1 ↔ R3
@@ -102,20 +111,57 @@ This project is intended to strengthen practical knowledge in:
 
 ---
 
-# Future Expansion
+# Architecture Features
 
-The lab will later expand into advanced networking concepts including:
-
-- iBGP
-- OSPF Integration
-- Route Reflectors
-- Local Preference
-- AS Path Prepending
-- MED
-- Route Filtering
-- Default Route Control
+- Enterprise Multi-Homing
+- Dual ISP Connectivity
+- eBGP External Routing
+- OSPF Internal Routing
+- HSRP Gateway Redundancy
 - Internet Simulation
-- MPLS Concepts
+- BGP Best Path Selection
+- Dynamic Route Failover
+- Enterprise WAN Resiliency
+
+---
+
+# Routing Protocols Used
+
+| Protocol | Purpose |
+|---|---|
+| BGP | External ISP routing |
+| OSPF | Internal enterprise routing |
+| HSRP | Gateway redundancy |
+
+---
+
+# Verification & Testing
+
+The following functionality was successfully verified during testing:
+
+- eBGP neighbor establishment
+- Route advertisement and learning
+- Dual ISP connectivity
+- Internet reachability
+- BGP best path selection
+- HSRP Active/Standby operation
+- Failover and reconvergence behavior
+- Backup path activation
+
+---
+
+# Project Screenshots
+
+Verification screenshots for:
+
+- BGP neighbor establishment
+- Best path selection
+- HSRP redundancy
+- Failover testing
+- Route validation
+- Internet reachability
+
+are available inside the `screenshots/` directory.
 
 ---
 
